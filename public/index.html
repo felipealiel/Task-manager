@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <header class="header">
+        <div class="logo">
+            <h1>TaskManager</h1>
+            <span>Organize suas tarefas</span>
+        </div>
+
+        <button class="btn-primary" id="btnNovaTarefa">
+            + Nova tarefa
+        </button>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <div>
+                <h2>Meu painel</h2>
+                <p>Gerencie suas atividades e acompanhe seu progresso.</p>
+            </div>
+        </section>
+
+        <!-- Indicadores -->
+        <section class="dashboard">
+
+            <div class="card-indicator">
+                <span>Total de tarefas</span>
+                <h3 id="totalTarefas">0</h3>
+            </div>
+
+            <div class="card-indicator">
+                <span>A fazer</span>
+                <h3 id="tarefasPendentes">0</h3>
+            </div>
+
+            <div class="card-indicator">
+                <span>Em andamento</span>
+                <h3 id="tarefasAndamento">0</h3>
+            </div>
+
+            <div class="card-indicator">
+                <span>Concluídas</span>
+                <h3 id="tarefasConcluidas">0</h3>
+            </div>
+
+        </section>
+
+        <!-- Barra de ferramentas -->
+        <section class="toolbar">
+
+            <input
+                type="text"
+                id="pesquisaTarefa"
+                placeholder="Pesquisar tarefas..."
+            >
+            <select id="filtroPrioridade">
+                <option value="">Todas as prioridades</option>
+                <option value="baixa">Baixa</option>
+                <option value="media">Média</option>
+                <option value="alta">Alta</option>
+            </select>
+
+        </section>
+
+        <!-- Quadro Kanban -->
+        <section class="kanban">
+
+            <div class="kanban-column">
+                <div class="column-header">
+                    <h3>A Fazer</h3>
+                    <span id="contadorPendente">0</span>
+                </div>
+
+                <div class="task-list" id="listaPendente">
+                    <!-- Tarefas pendentes serão inseridas aqui -->
+                </div>
+            </div>
+
+            <div class="kanban-column">
+                <div class="column-header">
+                    <h3>Em Andamento</h3>
+                    <span id="contadorAndamento">0</span>
+                </div>
+
+                <div class="task-list" id="listaAndamento">
+                    <!-- Tarefas em andamento serão inseridas aqui -->
+                </div>
+            </div>
+
+            <div class="kanban-column">
+                <div class="column-header">
+                    <h3>Concluídas</h3>
+                    <span id="contadorConcluidas">0</span>
+                </div>
+
+                <div class="task-list" id="listaConcluidas">
+                    <!-- Tarefas concluídas serão inseridas aqui -->
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

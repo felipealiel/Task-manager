@@ -1,0 +1,488 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #25283b;
+}
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.header {
+    width: 100%;
+    min-height: 85px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    border-bottom: 1px solid #8888a0;
+}
+
+.logo h1 {
+    color: #1835da;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.logo span {
+    display: block;
+    color: #1b1b1d;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.btn-primary {
+    background-color: #1835da;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #1835da;
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   CONTEÚDO PRINCIPAL
+======================================== */
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 35px auto;
+}
+
+.welcome {
+    margin-bottom: 25px;
+}
+
+.welcome h2 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    color: #8888a0;
+    font-size: 14px;
+}
+
+/* ========================================
+   INDICADORES
+======================================== */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card-indicator {
+    background-color: #ffffff;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #e8e9ef;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+}
+
+.card-indicator span {
+    color: #9294a5;
+    font-size: 13px;
+}
+
+.card-indicator h3 {
+    font-size: 28px;
+    margin-top: 12px;
+    color: #6254d9;
+}
+
+/* ========================================
+   BARRA DE FERRAMENTAS
+======================================== */
+
+.toolbar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.toolbar input,
+.toolbar select {
+    background-color: #ffffff;
+    border: 1px solid #dedfe7;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 14px;
+    outline: none;
+}
+
+.toolbar input {
+    flex: 1;
+}
+
+.toolbar select {
+    min-width: 210px;
+    cursor: pointer;
+}
+
+.toolbar input:focus,
+.toolbar select:focus {
+    border-color: #6254d9;
+    box-shadow: 0 0 0 3px rgba(98, 84, 217, 0.10);
+}
+
+/* ========================================
+   QUADRO KANBAN
+======================================== */
+
+.kanban {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+.kanban-column {
+    background-color: #eceef5;
+    border-radius: 12px;
+    padding: 18px;
+    min-height: 350px;
+}
+
+.column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.column-header h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.column-header span {
+    background-color: #ffffff;
+    color: #6254d9;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ========================================
+   CARTÕES DE TAREFAS
+======================================== */
+
+.task-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 16px;
+    border: 1px solid #e5e6ed;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.03);
+    transition: 0.2s;
+}
+
+.task-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.07);
+}
+
+.task-card h4 {
+    font-size: 15px;
+    margin-bottom: 9px;
+    color: #25283b;
+}
+
+.task-card p {
+    font-size: 13px;
+    color: #9294a5;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+/* ========================================
+   PRIORIDADES
+======================================== */
+
+.priority {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 5px 9px;
+    border-radius: 20px;
+}
+
+.priority-baixa {
+    background-color: #e0f5e9;
+    color: #24834a;
+}
+
+.priority-media {
+    background-color: #fff2d8;
+    color: #ad7515;
+}
+
+.priority-alta {
+    background-color: #ffe2e2;
+    color: #c33d3d;
+}
+
+/* ========================================
+   INFORMAÇÕES E AÇÕES DA TAREFA
+======================================== */
+
+.task-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.task-date {
+    font-size: 11px;
+    color: #9294a5;
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.task-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    color: #6254d9;
+}
+
+.task-actions button:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   FORMULÁRIOS E CAMPOS
+======================================== */
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .kanban {
+        grid-template-columns: 1fr;
+    }
+
+    .kanban-column {
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 18px 5%;
+        gap: 15px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .logo span {
+        font-size: 11px;
+    }
+
+    .btn-primary {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .container {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    .welcome h2 {
+        font-size: 22px;
+    }
+
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .card-indicator {
+        padding: 15px;
+    }
+
+    .card-indicator h3 {
+        font-size: 23px;
+    }
+
+    .toolbar {
+        flex-direction: column;
+    }
+
+    .toolbar select {
+        width: 100%;
+    }
+
+    .kanban {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ========================================
+   MODAL DE CADASTRO E EDIÇÃO
+======================================== */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(20, 22, 40, 0.55);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.modal-overlay.ativo {
+    display: flex;
+}
+
+.modal {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 480px;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.modal-header h2 {
+    font-size: 21px;
+}
+
+.btn-fechar {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #9294a5;
+    cursor: pointer;
+}
+
+#formTarefa {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#formTarefa label {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+#formTarefa input,
+#formTarefa textarea,
+#formTarefa select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dedfe7;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+#formTarefa input:focus,
+#formTarefa textarea:focus,
+#formTarefa select:focus {
+    border-color: #6254d9;
+}
+
+#formTarefa textarea {
+    resize: vertical;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-cancelar {
+    padding: 12px 18px;
+    border: 1px solid #dedfe7;
+    background-color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-cancelar:hover {
+    background-color: #f5f6fa;
+}
+
+.status-select {
+    width: 100%;
+    margin-top: 12px;
+    padding: 9px;
+    border: 1px solid #dedfe7;
+    border-radius: 7px;
+    background-color: #ffffff;
+    color: #6254d9;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.empty-message {
+    color: #9294a5;
+    font-size: 13px;
+    text-align: center;
+    padding: 25px 10px;
+}
